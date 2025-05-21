@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    background: #fff url('background1.png') center center / cover no-repeat fixed;
+}
+
+nav.navbar {
+    position: relative;
+    z-index: 10;
+}
+
+.navbar * {
+    color: white !important;
+}
+
+.navbar-nav .nav-link {
+    transition: transform 0.2s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    transform: scale(1.2);
+}
+
+.hero-section {
+    position: relative;
+    height: calc(100vh - 56px);
+    width: 100%;
+    overflow: hidden;
+    padding-top: 56px;
+}
+
+.hero-section .container-fluid {
+    height: 100%;
+    position: relative;
+}
+
+
+.text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    z-index: 3;
+    transition: left 1s ease, transform 1s ease, width 1s ease;
+    padding: 1em;
+    box-sizing: border-box;
+    max-width: 90vw;
+    word-wrap: break-word;
+    line-height: 1.2;
+    border-radius: 8px;
+}
+
+
+
+
+.animation-start .text-box {
+    left: 0;
+    transform: translateX(0);
+    /* width: 50%; */
+    text-align: left;
+}
+
+
+
+.image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    /* background: url('https://picsum.photos/id/1060/1200/800') center center / cover no-repeat; */
+    clip-path: polygon(100% 0, 100% 100%, 100% 100%, 100% 0);
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 100% 100%, 100% 0);
+    z-index: 1;
+    transition: clip-path 1s ease, -webkit-clip-path 1s ease;
+    overflow: hidden;
+}
+
+
+
+.animation-start .image {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.object-fit-cover {
+    object-fit: cover;
+  }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 50%;
+    background: linear-gradient(to right, #fff 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 2;
+    transition: left 1s ease;
+}
+
+.animation-start .overlay {
+    left: 50%;
+}
+nav.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+@media (max-width: 768px) {
+    .text-box {
+        font-size: 1.5em;
+        top: 40%;
+    }
+}
