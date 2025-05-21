@@ -8,8 +8,10 @@ body {
 }
 
 nav.navbar {
-    position: relative;
-    z-index: 10;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .navbar * {
@@ -29,6 +31,12 @@ nav.navbar {
     height: calc(100vh - 56px);
     width: 100%;
     overflow: hidden;
+    padding-top: 56px;
+}
+
+.hero-section .container-fluid {
+    height: 100%;
+    position: relative;
 }
 
 .text-box {
@@ -36,6 +44,7 @@ nav.navbar {
     top: 40%;
     left: 50%;
     transform: translateX(-50%);
+    width: 50%;
     font-size: 2.5em;
     font-weight: bold;
     color: white;
@@ -53,7 +62,7 @@ nav.navbar {
 .animation-start .text-box {
     left: 0;
     transform: translateX(0);
-    width: 50%;
+    /* width: 50%; */
     text-align: left;
 }
 
@@ -63,16 +72,21 @@ nav.navbar {
     left: 50%;
     width: 50%;
     height: 100%;
-    background: url('https://picsum.photos/id/1060/1200/800') center center / cover no-repeat;
+    /* background: url('https://picsum.photos/id/1060/1200/800') center center / cover no-repeat; */
     clip-path: polygon(100% 0, 100% 100%, 100% 100%, 100% 0);
     -webkit-clip-path: polygon(100% 0, 100% 100%, 100% 100%, 100% 0);
     z-index: 1;
     transition: clip-path 1s ease, -webkit-clip-path 1s ease;
+    overflow: hidden;
 }
 
 .animation-start .image {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.object-fit-cover {
+    object-fit: cover;
 }
 
 .overlay {
@@ -96,4 +110,3 @@ nav.navbar {
         top: 40%;
     }
 }
-

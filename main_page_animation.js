@@ -1,3 +1,4 @@
+
 function startAnimation() {
     document.body.classList.remove('animation-start');
     void document.body.offsetWidth; 
