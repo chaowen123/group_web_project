@@ -6,32 +6,109 @@ body {
     height: 100%;
 }
 
-.hero-section,
-.menu-section {
+.hero-section {
     height: 100vh;
     scroll-snap-align: start;
 }
 
-.scroll-down-btn {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 2rem;
-    color: white;
-    text-decoration: none;
-    z-index: 5;
-    animation: bounce 2s infinite;
+.menu-section {
+    height: 100%;
+    scroll-snap-align: start;
+
 }
 
-@keyframes bounce {
+.menu-content {
+    flex-grow: 1;
+    padding: 200px 100px 200px 200px;
+    max-height: calc(100vh - 100px);
+    /* 留出 navbar 和 padding 空间 */
 
-    0%,
-    100% {
-        transform: translate(-50%, 0);
+    overflow-y: auto;
+    overflow: hidden;
+    /* ✅ 禁止内部自己滚动 */
+
+
+}
+
+.scroll-zone {
+    max-height: 500px;
+    /* 控制可视高度 */
+    overflow: auto;
+    /* 横竖都允许滑动 */
+    padding: 1rem;
+    border: 1px solid transparent;
+    scrollbar-width: none;
+}
+
+.scroll-wrapper {
+    overflow-x: hidden;
+    position: relative;
+}
+
+.scroll-track {
+    display: flex;
+    width: fit-content;
+    animation: scroll-left 20s linear infinite;
+}
+
+.card {
+    width: 200px;
+    height: 200px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+    overflow: hidden;
+    gap: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* ⬅️ 关键点，让图片覆盖卡片区域 */
+    border-radius: 12px;
+}
+
+.scroll-zone::-webkit-scrollbar {
+    display: none;
+    /* Chrome 隐藏 */
+}
+
+.menu-nav a {
+    display: block;
+    width: 100px;
+    padding: 12px 16px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid #dc3545;
+    /* Bootstrap danger red */
+    border-radius: 8px;
+    color: #dc3545;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-size: 16px;
+}
+
+.menu-nav a:hover,
+.menu-nav a.active {
+    background-color: #dc3545;
+    color: white;
+}
+
+
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
     }
 
-    50% {
-        transform: translate(-50%, 10px);
+    100% {
+        transform: translateX(-50%);
     }
 }

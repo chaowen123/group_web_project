@@ -4,7 +4,7 @@ body {
     height: 100%;
     overflow: hidden;
     font-family: 'Arial', sans-serif;
-    background: #fff url('background1.png') center center / cover no-repeat fixed;
+    background: #fff url('images/background1.png') center center / cover no-repeat fixed;
 }
 
 nav.navbar {

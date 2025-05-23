@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="menus.css">
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" tabindex="0">
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#">Garden Bistro</a>
@@ -42,44 +42,177 @@
 
   <!-- Main Section -->
   <div class="hero-section" id="hero">
-    <div class="container-fluid position-relative">
-      <div class="text-box">WHERE EVERY<br>SPOON IS<br>A JOYFUL JOURNEY</div>
 
-      <div id="heroCarousel" class="carousel slide image" data-bs-ride="carousel">
-        <div class="carousel-inner h-100">
-          <div class="carousel-item active h-100">
-            <img src="https://picsum.photos/id/1060/1200/800" class="d-block w-100 h-100 object-fit-cover"
-              alt="Slide 1">
-          </div>
-          <div class="carousel-item h-100">
-            <img src="https://picsum.photos/id/1059/1200/800" class="d-block w-100 h-100 object-fit-cover"
-              alt="Slide 2">
-          </div>
+    <div class="text-box">WHERE EVERY<br>SPOON IS<br>A JOYFUL JOURNEY</div>
+    <div class="container-fluid position-relative"></div>
+    <div id="heroCarousel" class="carousel slide image" data-bs-ride="carousel">
+      <div class="carousel-inner h-100">
+        <div class="carousel-item active h-100">
+          <img src="images/beijin_pizza.png" class="d-block w-100 h-100 object-fit-cover" alt="Slide 1">
         </div>
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+        <div class="carousel-item h-100">
+          <img src="images/c_special.png" class="d-block w-100 h-100 object-fit-cover" alt="Slide 2">
+        </div>
+        <div class="carousel-item h-100">
+          <img src="images/chicken_steak.png" class="d-block w-100 h-100 object-fit-cover" alt="Slide 3">
+        </div>
+        <div class="carousel-item h-100">
+          <img src="images/K_rip_loster.png" class="d-block w-100 h-100 object-fit-cover" alt="Slide 4">
+        </div>
+        <div class="carousel-item h-100">
+          <img src="images/pork_nekel.png" class="d-block w-100 h-100 object-fit-cover" alt="Slide 5">
+        </div>
       </div>
-
-      <!-- Scroll Down Anchor -->
-      <a href="#menu-section" class="scroll-down-btn">↓</a>
     </div>
-  </div> <!--main-section -->
+  </div>
 
-  <!-- Menu Section -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+  </div>
+
+  </div>
+  </div>
+
+
+  <!--main-section -->
   <section id="menu-section" class="menu-section">
-    <div class="container py-5">
-      
-      <div class="row">
-        <!-- more item... -->
+    <div class="d-flex h-100">
+      <!-- Left Menu -->
+      <div class="menu-nav d-flex flex-column justify-content-center align-items-start px-3">
+        <a href="#" onclick="scrollToSection('sushi')">Sushi</a>
+        <a href="#" onclick="scrollToSection('ramen')">Ramen</a>
+        <a href="#" onclick="scrollToSection('desserts')">Desserts</a>
       </div>
-    </div>
+      <!-- Right Content -->
+      <div class="menu-content flex-grow-1">
+        <!-- Sushi -->
+
+        <div class="scroll-zone" id="menuScrollZone">
+          <h4 id="sushi">Steck</h4>
+          <div class="scroll-wrapper">
+            <div class="scroll-track">
+              <div class="card">
+                <img src="images/chicken_beef_.png" class="card-img">
+              </div>
+              <div class="card">
+                <img src="images/chicken_steak.png" class="card-img">
+              </div>
+              <div class="card">
+                <img src="images/c_special.png" class="card-img">
+              </div>
+              <div class="card">
+                <img src="images/K_rip_loster.png" class="card-img">
+              </div>
+              <div class="card">
+                <img src="images/pork_nekel.png" class="card-img">
+              </div>
+
+              <div class="card">
+                <img src="images/chicken_beef_.png" class="card-img">
+              </div>
+              <div class="card">
+                <img src="images/chicken_steak.png" class="card-img">
+              </div>
+              <div class="card">
+                <img src="images/c_special.png" class="card-img">
+              </div>
+              <div class="card">
+                <img src="images/K_rip_loster.png" class="card-img">
+              </div>
+              <div class="card">
+                <img src="images/pork_nekel.png" class="card-img">
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- Ramen -->
+          <h4 id="ramen">Drink</h4>
+          <div class="scroll-wrapper">
+            <div class="scroll-track">
+              <div class="card">
+                <img src="images/chocolate_shake.png" class="card-img">
+              </div>
+              <div class="card">
+                <img src="images/sturbary_shake.png" class="card-img">
+              </div>
+              <div class="card">
+                <img src="images/milk_tea.png" class="card-img">
+              </div>
+              <div class="card">
+                <img src="images/mango_shake.png" class="card-img">
+              </div>
+              <div class="card">
+                <img src="images/lemon_tea.png" class="card-img">
+              </div>
+
+              <div class="card">
+                <img src="images/chocolate_shake.png" class="card-img">
+              </div>
+              <div class="card">
+                <img src="images/sturbary_shake.png" class="card-img">
+              </div>
+              <div class="card">
+                <img src="images/milk_tea.png" class="card-img">
+              </div>
+              <div class="card">
+                <img src="images/mango_shake.png" class="card-img">
+              </div>
+              <div class="card">
+                <img src="images/lemon_tea.png" class="card-img">
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- Desserts -->
+          <h4 id="desserts">Frie </h4>
+          <div class="scroll-wrapper">
+            <div class="scroll-track">
+              <div class="card">
+                <img src="images/beef_fun.png" class="card-img">
+              </div>
+              <div class="card">
+                <img src="images/beef_wudon.png" class="card-img">
+              </div>
+              <div class="card">
+                <img src="images/indu_fun.png" class="card-img">
+              </div>
+              <div class="card">
+                <img src="images/chaomian.png" class="card-img">
+              </div>
+              <div class="card">
+                <img src="images/chaofan.png" class="card-img">
+              </div>
+
+              <div class="card">
+                <img src="images/beef_fun.png" class="card-img">
+              </div>
+              <div class="card">
+                <img src="images/beef_wudon.png" class="card-img">
+              </div>
+              <div class="card">
+                <img src="images/indu_fun.png" class="card-img">
+              </div>
+              <div class="card">
+                <img src="images/chaomian.png" class="card-img">
+              </div>
+              <div class="card">
+                <img src="images/chaofan.png" class="card-img">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
   </section>
 
   <!-- Scripts -->
@@ -89,4 +222,5 @@
 </body>
 
 </body>
+
 </html>
