@@ -38,6 +38,7 @@ body {
     padding: 1rem;
     border: 1px solid transparent;
     scrollbar-width: none;
+    margin: 0 auto;
 }
 
 .scroll-wrapper {
@@ -82,7 +83,7 @@ body {
     display: block;
     width: 100px;
     padding: 12px 16px;
-    margin: 0 auto;
+    margin: 20px 0 20px 50px;
     text-align: center;
     background-color: transparent;
     border: 2px solid #dc3545;
@@ -101,7 +102,41 @@ body {
     color: white;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
 
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 400px;
+}
+
+.modal-content img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.modal-content button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
 
 @keyframes scroll-left {
     0% {

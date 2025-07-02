@@ -44,7 +44,7 @@
   <div class="hero-section" id="hero">
     <div class="text-box">WHERE EVERY<br>SPOON IS<br>A JOYFUL JOURNEY</div>
     <div class="container-fluid position-relative"></div>
-    
+
     <div id="heroCarousel" class="carousel slide image" data-bs-ride="carousel">
       <div class="carousel-inner h-100">
         <div class="carousel-item active h-100">
@@ -93,7 +93,8 @@
           <div class="scroll-wrapper">
             <div class="scroll-track">
               <div class="card">
-                <img src="images/chicken_beef_.png" class="card-img">
+                <img src="images/chicken_beef_.png" class="card-img" onclick="showDish('images/chicken_beef_.png', 'Chicken & Beef Combo', 
+                'Juicy grilled chicken and beef served with veggies.')">
               </div>
               <div class="card">
                 <img src="images/chicken_steak.png" class="card-img">
@@ -109,7 +110,8 @@
               </div>
 
               <div class="card">
-                <img src="images/chicken_beef_.png" class="card-img">
+                <img src="images/chicken_beef_.png" class="card-img" onclick="showDish('images/chicken_beef_.png', 'Chicken & Beef Combo', 
+                'Juicy grilled chicken and beef served with veggies.')">
               </div>
               <div class="card">
                 <img src="images/chicken_steak.png" class="card-img">
@@ -214,6 +216,15 @@
   <script src="main_page_animation.js"></script>
   <script src="menus.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <div id="dishModal" class="modal" onclick="hideDish()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <img id="modalImage" src="" alt="Dish Image">
+      <h2 id="modalTitle"></h2>
+      <p id="modalDesc"></p>
+      <button onclick="hideDish()">Close</button>
+    </div>
+  </div>
 </body>
 
 </body>
