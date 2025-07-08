@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="menus.css">
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" tabindex="0">
+<body>
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#">Garden Bistro</a>
@@ -80,50 +80,68 @@
     <div class="d-flex h-100">
       <!-- Left Menu -->
       <div class="menu-nav d-flex flex-column justify-content-center align-items-start px-3">
-        <a href="#" onclick="scrollToSection('sushi')">Sushi</a>
-        <a href="#" onclick="scrollToSection('ramen')">Ramen</a>
-        <a href="#" onclick="scrollToSection('desserts')">Desserts</a>
+        <a href="#" onclick="scrollToSection('sushi')">Steck</a>
+        <a href="#" onclick="scrollToSection('ramen')">Drink</a>
+        <a href="#" onclick="scrollToSection('desserts')">Frie</a>
       </div>
       <!-- Right Content -->
       <div class="menu-content flex-grow-1">
         <!-- Sushi -->
 
-        <div class="scroll-zone" id="menuScrollZone">
+        <div class="scroll-zone" id="menuScrollZone" tabindex="0">
           <h4 id="sushi">Steck</h4>
           <div class="scroll-wrapper">
             <div class="scroll-track">
               <div class="card">
-                <img src="images/chicken_beef_.png" class="card-img" onclick="showDish('images/chicken_beef_.png', 'Chicken & Beef Combo', 
-                'Juicy grilled chicken and beef served with veggies.')">
+                <img src="images/chicken_beef_.png" class="card-img" data-bs-toggle="modal" data-bs-target="#dishModal"
+                  data-dish-img="images/chicken_beef_.png" data-dish-title="Chicken & Beef Combo"
+                  data-dish-desc="Juicy grilled chicken and beef served with veggies.">
               </div>
               <div class="card">
-                <img src="images/chicken_steak.png" class="card-img">
+                <img src="images/chicken_steak.png" class="card-img" data-bs-toggle="modal" data-bs-target="#dishModal"
+                  data-dish-img="images/chicken_steak.png" data-dish-title="Chicken Steak"
+                  data-dish-desc="A tender and juicy chicken steak.">
               </div>
               <div class="card">
-                <img src="images/c_special.png" class="card-img">
+                <img src="images/c_special.png" class="card-img" data-bs-toggle="modal" data-bs-target="#dishModal"
+                  data-dish-img="images/c_special.png" data-dish-title="C Special"
+                  data-dish-desc="The chef's special creation.">
               </div>
               <div class="card">
-                <img src="images/K_rip_loster.png" class="card-img">
+                <img src="images/K_rip_loster.png" class="card-img" data-bs-toggle="modal" data-bs-target="#dishModal"
+                  data-dish-img="images/K_rip_loster.png" data-dish-title="Crispy Lobster"
+                  data-dish-desc="Deliciously crispy and savory lobster.">
               </div>
               <div class="card">
-                <img src="images/pork_nekel.png" class="card-img">
+                <img src="images/pork_nekel.png" class="card-img" data-bs-toggle="modal" data-bs-target="#dishModal"
+                  data-dish-img="images/pork_nekel.png" data-dish-title="Pork Knuckle"
+                  data-dish-desc="A hearty and flavorful pork knuckle.">
               </div>
 
               <div class="card">
-                <img src="images/chicken_beef_.png" class="card-img" onclick="showDish('images/chicken_beef_.png', 'Chicken & Beef Combo', 
-                'Juicy grilled chicken and beef served with veggies.')">
+                <img src="images/chicken_beef_.png" class="card-img" data-bs-toggle="modal" data-bs-target="#dishModal"
+                  data-dish-img="images/chicken_beef_.png" data-dish-title="Chicken & Beef Combo"
+                  data-dish-desc="Juicy grilled chicken and beef served with veggies.">
               </div>
               <div class="card">
-                <img src="images/chicken_steak.png" class="card-img">
+                <img src="images/chicken_steak.png" class="card-img" data-bs-toggle="modal" data-bs-target="#dishModal"
+                  data-dish-img="images/chicken_steak.png" data-dish-title="Chicken Steak"
+                  data-dish-desc="A tender and juicy chicken steak.">
               </div>
               <div class="card">
-                <img src="images/c_special.png" class="card-img">
+                <img src="images/c_special.png" class="card-img" data-bs-toggle="modal" data-bs-target="#dishModal"
+                  data-dish-img="images/c_special.png" data-dish-title="C Special"
+                  data-dish-desc="The chef's special creation.">
               </div>
               <div class="card">
-                <img src="images/K_rip_loster.png" class="card-img">
+                <img src="images/K_rip_loster.png" class="card-img" data-bs-toggle="modal" data-bs-target="#dishModal"
+                  data-dish-img="images/K_rip_loster.png" data-dish-title="Crispy Lobster"
+                  data-dish-desc="Deliciously crispy and savory lobster.">
               </div>
               <div class="card">
-                <img src="images/pork_nekel.png" class="card-img">
+                <img src="images/pork_nekel.png" class="card-img" data-bs-toggle="modal" data-bs-target="#dishModal"
+                  data-dish-img="images/pork_nekel.png" data-dish-title="Pork Knuckle"
+                  data-dish-desc="A hearty and flavorful pork knuckle.">
               </div>
 
             </div>
@@ -135,35 +153,57 @@
           <div class="scroll-wrapper">
             <div class="scroll-track">
               <div class="card">
-                <img src="images/chocolate_shake.png" class="card-img">
+                <img src="images/chocolate_shake.png" class="card-img" data-bs-toggle="modal"
+                  data-bs-target="#dishModal" data-dish-img="images/chocolate_shake.png"
+                  data-dish-title="Chocolate Shake" data-dish-desc="A rich and creamy chocolate shake.">
               </div>
               <div class="card">
-                <img src="images/sturbary_shake.png" class="card-img">
+                <img src="images/sturbary_shake.png" class="card-img" data-bs-toggle="modal"
+                  data-bs-target="#dishModal" data-dish-img="images/sturbary_shake.png"
+                  data-dish-title="Strawberry Shake"
+                  data-dish-desc="A refreshing strawberry shake made with real fruit.">
               </div>
               <div class="card">
-                <img src="images/milk_tea.png" class="card-img">
+                <img src="images/milk_tea.png" class="card-img" data-bs-toggle="modal" data-bs-target="#dishModal"
+                  data-dish-img="images/milk_tea.png" data-dish-title="Milk Tea"
+                  data-dish-desc="Classic milk tea, smooth and delicious.">
               </div>
               <div class="card">
-                <img src="images/mango_shake.png" class="card-img">
+                <img src="images/mango_shake.png" class="card-img" data-bs-toggle="modal"
+                  data-bs-target="#dishModal" data-dish-img="images/mango_shake.png" data-dish-title="Mango Shake"
+                  data-dish-desc="A sweet and tropical mango shake.">
               </div>
               <div class="card">
-                <img src="images/lemon_tea.png" class="card-img">
+                <img src="images/lemon_tea.png" class="card-img" data-bs-toggle="modal" data-bs-target="#dishModal"
+                  data-dish-img="images/lemon_tea.png" data-dish-title="Lemon Tea"
+                  data-dish-desc="Iced lemon tea, a perfect summer drink.">
               </div>
 
               <div class="card">
-                <img src="images/chocolate_shake.png" class="card-img">
+                <img src="images/chocolate_shake.png" class="card-img" data-bs-toggle="modal"
+                  data-bs-target="#dishModal" data-dish-img="images/chocolate_shake.png"
+                  data-dish-title="Chocolate Shake" data-dish-desc="A rich and creamy chocolate shake.">
               </div>
               <div class="card">
-                <img src="images/sturbary_shake.png" class="card-img">
+                <img src="images/sturbary_shake.png" class="card-img" data-bs-toggle="modal"
+                  data-bs-target="#dishModal" data-dish-img="images/sturbary_shake.png"
+                  data-dish-title="Strawberry Shake"
+                  data-dish-desc="A refreshing strawberry shake made with real fruit.">
               </div>
               <div class="card">
-                <img src="images/milk_tea.png" class="card-img">
+                <img src="images/milk_tea.png" class="card-img" data-bs-toggle="modal" data-bs-target="#dishModal"
+                  data-dish-img="images/milk_tea.png" data-dish-title="Milk Tea"
+                  data-dish-desc="Classic milk tea, smooth and delicious.">
               </div>
               <div class="card">
-                <img src="images/mango_shake.png" class="card-img">
+                <img src="images/mango_shake.png" class="card-img" data-bs-toggle="modal"
+                  data-bs-target="#dishModal" data-dish-img="images/mango_shake.png" data-dish-title="Mango Shake"
+                  data-dish-desc="A sweet and tropical mango shake.">
               </div>
               <div class="card">
-                <img src="images/lemon_tea.png" class="card-img">
+                <img src="images/lemon_tea.png" class="card-img" data-bs-toggle="modal" data-bs-target="#dishModal"
+                  data-dish-img="images/lemon_tea.png" data-dish-title="Lemon Tea"
+                  data-dish-desc="Iced lemon tea, a perfect summer drink.">
               </div>
 
             </div>
@@ -175,35 +215,55 @@
           <div class="scroll-wrapper">
             <div class="scroll-track">
               <div class="card">
-                <img src="images/beef_fun.png" class="card-img">
+                <img src="images/beef_fun.png" class="card-img" data-bs-toggle="modal" data-bs-target="#dishModal"
+                  data-dish-img="images/beef_fun.png" data-dish-title="Beef Chow Fun"
+                  data-dish-desc="Stir-fried beef with wide rice noodles.">
               </div>
               <div class="card">
-                <img src="images/beef_wudon.png" class="card-img">
+                <img src="images/beef_wudon.png" class="card-img" data-bs-toggle="modal"
+                  data-bs-target="#dishModal" data-dish-img="images/beef_wudon.png" data-dish-title="Beef Udon"
+                  data-dish-desc="Stir-fried beef with Japanese udon noodles.">
               </div>
               <div class="card">
-                <img src="images/indu_fun.png" class="card-img">
+                <img src="images/indu_fun.png" class="card-img" data-bs-toggle="modal" data-bs-target="#dishModal"
+                  data-dish-img="images/indu_fun.png" data-dish-title="Indonesian Fried Noodles"
+                  data-dish-desc="Spicy and savory Indonesian-style fried noodles.">
               </div>
               <div class="card">
-                <img src="images/chaomian.png" class="card-img">
+                <img src="images/chaomian.png" class="card-img" data-bs-toggle="modal" data-bs-target="#dishModal"
+                  data-dish-img="images/chaomian.png" data-dish-title="Chow Mein"
+                  data-dish-desc="Classic Chinese stir-fried noodles.">
               </div>
               <div class="card">
-                <img src="images/chaofan.png" class="card-img">
+                <img src="images/chaofan.png" class="card-img" data-bs-toggle="modal" data-bs-target="#dishModal"
+                  data-dish-img="images/chaofan.png" data-dish-title="Fried Rice"
+                  data-dish-desc="Flavorful fried rice with mixed vegetables.">
               </div>
 
               <div class="card">
-                <img src="images/beef_fun.png" class="card-img">
+                <img src="images/beef_fun.png" class="card-img" data-bs-toggle="modal" data-bs-target="#dishModal"
+                  data-dish-img="images/beef_fun.png" data-dish-title="Beef Chow Fun"
+                  data-dish-desc="Stir-fried beef with wide rice noodles.">
               </div>
               <div class="card">
-                <img src="images/beef_wudon.png" class="card-img">
+                <img src="images/beef_wudon.png" class="card-img" data-bs-toggle="modal"
+                  data-bs-target="#dishModal" data-dish-img="images/beef_wudon.png" data-dish-title="Beef Udon"
+                  data-dish-desc="Stir-fried beef with Japanese udon noodles.">
               </div>
               <div class="card">
-                <img src="images/indu_fun.png" class="card-img">
+                <img src="images/indu_fun.png" class="card-img" data-bs-toggle="modal" data-bs-target="#dishModal"
+                  data-dish-img="images/indu_fun.png" data-dish-title="Indonesian Fried Noodles"
+                  data-dish-desc="Spicy and savory Indonesian-style fried noodles.">
               </div>
               <div class="card">
-                <img src="images/chaomian.png" class="card-img">
+                <img src="images/chaomian.png" class="card-img" data-bs-toggle="modal" data-bs-target="#dishModal"
+                  data-dish-img="images/chaomian.png" data-dish-title="Chow Mein"
+                  data-dish-desc="Classic Chinese stir-fried noodles.">
               </div>
               <div class="card">
-                <img src="images/chaofan.png" class="card-img">
+                <img src="images/chaofan.png" class="card-img" data-bs-toggle="modal" data-bs-target="#dishModal"
+                  data-dish-img="images/chaofan.png" data-dish-title="Fried Rice"
+                  data-dish-desc="Flavorful fried rice with mixed vegetables.">
               </div>
             </div>
           </div>
@@ -217,16 +277,22 @@
   <script src="menus.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <div id="dishModal" class="modal" onclick="hideDish()">
-    <div class="modal-content" onclick="event.stopPropagation()">
-      <img id="modalImage" src="" alt="Dish Image">
-      <h2 id="modalTitle"></h2>
-      <p id="modalDesc"></p>
-      <button onclick="hideDish()">Close</button>
+  <!-- Bootstrap Modal -->
+  <div class="modal fade" id="dishModal" tabindex="-1" aria-labelledby="dishModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="dishModalLabel">Dish Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img id="modalImage" src="" alt="Dish Image" class="img-fluid mb-3">
+          <h2 id="modalTitle"></h2>
+          <p id="modalDesc"></p>
+        </div>
+      </div>
     </div>
   </div>
-</body>
-
 </body>
 
 </html>

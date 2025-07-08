@@ -1,4 +1,3 @@
-
 function startAnimation() {
     document.body.classList.remove('animation-start');
     void document.body.offsetWidth;
@@ -14,21 +13,13 @@ window.addEventListener('resize', () => {
     setTimeout(startAnimation, 500);
 });
 
-
-
-// function scrollToSection(id) {
-//     const section = document.getElementById(id);
-//     if (section) {
-//         section.scrollIntoView({ behavior: 'smooth' });
-//     }
-// }
 function scrollToSection(id) {
     const container = document.getElementById('menuScrollZone');
     const section = document.getElementById(id);
 
     if (container && section) {
         container.scrollTo({
-            top: section.offsetTop,
+            top: section.offsetTop - container.offsetTop,
             behavior: 'smooth'
         });
     }
@@ -44,3 +35,29 @@ function showDish(imageUrl, title, desc) {
 function hideDish() {
   document.getElementById('dishModal').style.display = 'none';
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    var dishModal = document.getElementById('dishModal');
+    if (dishModal) {
+        dishModal.addEventListener('show.bs.modal', function (event) {
+            // Button that triggered the modal
+            var button = event.relatedTarget;
+            // Extract info from data-bs-* attributes
+            var dishImg = button.getAttribute('data-dish-img');
+            var dishTitle = button.getAttribute('data-dish-title');
+            var dishDesc = button.getAttribute('data-dish-desc');
+
+            // Update the modal's content.
+            var modalImage = dishModal.querySelector('#modalImage');
+            var modalTitle = dishModal.querySelector('#modalTitle');
+            var modalDesc = dishModal.querySelector('#modalDesc');
+            var modalLabel = dishModal.querySelector('#dishModalLabel');
+
+
+            modalImage.src = dishImg;
+            modalTitle.textContent = dishTitle;
+            modalDesc.textContent = dishDesc;
+            modalLabel.textContent = dishTitle;
+        });
+    }
+});
